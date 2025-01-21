@@ -13,8 +13,10 @@
   <div ng-controller="todoCtrl">
     <h2> {{ remaining() }} of {{ getTotalTodos() }} remaining</h2>
 
+    <input type="text" ng-model="searchText" placeholder="Search">
+
     <ul class="unstyled">
-      <li ng-repeat="todo in todos">
+      <li ng-repeat="todo in todos | filter:searchText">
         <input type="checkbox" ng-model="todo.done">
         <span class="done-{{todo.done}}">{{ todo.text }}</span>
       </li>
