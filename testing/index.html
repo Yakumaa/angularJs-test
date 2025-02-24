@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="helloWorldApp">
+	<head>
+		<meta charset="utf-8" />
+		<title>Hello World with AngularJS</title>
+		<!-- Include AngularJS library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<!-- Include our app code -->
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="HelloWorldController">
+			<h1>{{ greeting }}</h1>
+			<input type="text" ng-model="greeting" />
+		</div>
+	</body>
+</html>
