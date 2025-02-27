@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Custom Filters</title>
+		<!-- Load AngularJS from a CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<!-- Load our app code -->
+		<script src="customFilters.js"></script>
+	</head>
+	<body>
+		<div ng-controller="FilterController">
+      <p>Original: {{ greeting }}</p>
+      <p>Reversed: {{ greeting | reverse }}</p>
+	</body>
+</html>
