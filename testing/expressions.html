@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<title>AngularJS Expressions Example</title>
+		<!-- Load AngularJS from a CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<!-- Load our app code -->
+		<script src="expressions.js"></script>
+	</head>
+	<body>
+		<div ng-controller="ExpressionController">
+			<!-- Displaying simple variables -->
+			<p>The value of a is: {{ a }}</p>
+
+			<!-- Performing arithmetic operations -->
+			<p>{{ a }} + {{ b }} = {{ a + b }}</p>
+
+			<!-- Calling a function defined on the scope -->
+			<p>Sum using function: {{ getSum() }}</p>
+
+			<!-- Accessing object properties -->
+			<p>User: {{ user.name }}</p>
+
+			<!-- Using filters to format data -->
+			<p>Today is: {{ today | date:'medium' }}</p>
+		</div>
+	</body>
+</html>

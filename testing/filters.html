@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<title>AngularJS Filters Example</title>
+		<!-- Load AngularJS from a CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<!-- Load our app code -->
+		<script src="filters.js"></script>
+	</head>
+	<body>
+		<div ng-controller="FilterController">
+			<!-- Format the date -->
+			<p>Today is: {{ today | date:'fullDate' }}</p>
+
+			<!-- Format a number as currency -->
+			<p>Price: {{ price | currency:"€" }}</p>
+
+			<!-- Convert text to uppercase -->
+			<p>Uppercase Name: {{ name | uppercase }}</p>
+
+			<!-- Order an array of numbers -->
+			<p>Sorted Numbers: {{ numbers | orderBy }}</p>
+		</div>
+	</body>
+</html>
